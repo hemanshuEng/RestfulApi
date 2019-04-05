@@ -21,11 +21,12 @@ create migration ,factory and resource controller
 2. add review table
 3. appseviceProvider.php
    add this line
+
    `use Illuminate\Support\Facades\Schema;
 
     public function boot()  
     {  
     Schema::defaultStringLength(191);  
-    }  `
+    }`
 
 `php artisan migrate`
