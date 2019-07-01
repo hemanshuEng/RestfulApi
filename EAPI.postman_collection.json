@@ -1,0 +1,258 @@
+{
+	"variables": [],
+	"info": {
+		"name": "EAPI",
+		"_postman_id": "2a47faa5-fa3f-006d-dee1-2dfd10825aa3",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "product",
+			"description": "",
+			"item": [
+				{
+					"name": "Product All",
+					"request": {
+						"url": "http://restfulapi.test/api/products",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Product show",
+					"request": {
+						"url": "http://restfulapi.test/api/products/6",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Create product",
+					"request": {
+						"url": "http://restfulapi.test/api/products",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{auth}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"laptop x\",\n\t\"description\":\"lapto 14'inch rbb display\",\n\t\"stock\":\"10\",\n\t\"price\":\"500\",\n\t\"discount\":\"20\"\n}"
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "update product",
+					"request": {
+						"url": "http://restfulapi.test/api/products/8",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{auth}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"laptop x\",\n\t\"description\":\"lapto 14'inch rbb display\",\n\t\"stock\":\"10\",\n\t\"price\":\"500\",\n\t\"discount\":\"20\"\n}"
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Destroy product",
+					"request": {
+						"url": "http://restfulapi.test/api/products/104",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{auth}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"laptop x update once\",\n\t\"description\":\"lapto 14'inch rbb display more rbg display\",\n\t\"stock\":\"10\",\n\t\"price\":\"500\",\n\t\"discount\":\"20\"\n}"
+						},
+						"description": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Review",
+			"description": "",
+			"item": [
+				{
+					"name": "reviews show",
+					"request": {
+						"url": "http://restfulapi.test/api/products/5/reviews",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Create reviews",
+					"request": {
+						"url": "http://restfulapi.test/api/products/38/reviews",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{auth}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"customer\":\"ankur\",\n\"star\":4,\n\"review\":\"best thing ever\"\n}"
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "update reviews",
+					"request": {
+						"url": "http://restfulapi.test/api/products/38/reviews/302",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{auth}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"customer\":\"ankurrrr\",\n\"star\":4,\n\"review\":\"best thing ever\"\n}"
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Delete reviews",
+					"request": {
+						"url": "http://restfulapi.test/api/products/38/reviews/302",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{auth}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"customer\":\"ankur\",\n\"star\":4,\n\"review\":\"best thing ever\"\n}"
+						},
+						"description": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Oauth",
+			"description": "",
+			"item": [
+				{
+					"name": "http://restfulapi.test/api/user",
+					"request": {
+						"url": "http://restfulapi.test/oauth/token",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"grant_type\":\"password\",\n\t\"client_id\":\"2\",\n\t\"client_secret\":\"Gq5qkez2EkKQAJgVEagTsVZRiqSDhyJzIFvUbmMs\",\n\t\"username\":\"stehr.lavon@example.org\",\n\t\"password\":\"password\"\n}"
+						},
+						"description": null
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
